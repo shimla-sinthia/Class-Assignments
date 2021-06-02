@@ -49,7 +49,7 @@ int main()
        long double X = temp - double(temp2);
        ll ans1st = pow(10 , X) * 100;
        ll ans2nd = power(n, k);
-       cout << ans1st << " ";;
+       cout << ans1st << " ";
        printf("%03d", ans2nd);
        cout << endl;
    }

@@ -67,10 +67,41 @@ typedef tree<int, null_type, greater<int>, rb_tree_tag, tree_order_statistics_no
 #define ll int
 
 string a, b;
+ll n, m;
 string dp[1003][1003];
-string solve(string x, string y)
+
+string mni(string x, string y)
 {
-   
+   if(x.size() > y.size())
+   return x;
+   else if(x.size() < y.size())
+   return y;
+   else{
+      if(x < y)
+      return x;
+      else
+      return y;
+   }
+}
+
+string solve(ll i, ll j)
+{
+   if(i == n || j == m)
+   return "";
+
+   if(dp[i][j] != "#")
+   return dp[i][j];
+   string temp = "", temp1 = "", temp2 = "";
+   if(a[i] == b[j])
+   {
+       temp = a[i] + solve(i + 1, j + 1);
+   }
+   else
+   {
+       temp1 = solve(i + 1, j);
+       temp2 = solve(i, j + 1);
+   }
+   return dp[i][j] = mni(mni(temp, temp1), temp2);
 }
 int main()
 {
@@ -84,15 +115,19 @@ int main()
    while(t--)
    {
       ct++;
-      ll n, m;
       cout << "Case " << ct << ": "; 
       cin >> a >> b;
       n = a.size();
       m = b.size();
-      
+      for(int i = 0; i <= n; i++)
+      {
+          for(int j = 0; j <= m; j++)
+          dp[i][j] = "#";
+      }
+      string ans = solve(0, 0);
       if(ans.size() > 0)
       cout << ans << endl;
       else cout << ":(" << endl;
    }
-  rr ;
+  rr;
 }

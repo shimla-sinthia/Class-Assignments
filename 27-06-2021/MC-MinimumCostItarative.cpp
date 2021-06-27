@@ -1,29 +1,7 @@
 //Bismillah Hir Rehmanir Rahim
 //Allah knows best
 #include<bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
 using namespace std;
-using    namespace __gnu_pbds;
-#include <iostream>
-#include <cstdio>
-#include <cstdlib>
-#include <algorithm>
-#include <iomanip>
-#include <cmath>
-#include <vector>
-#include <set>
-#include <map>
-#include <unordered_set>
-#include <unordered_map>
-#include <queue>
-#include <ctime>
-#include <cassert>
-#include <complex>
-#include <string>
-#include <cstring>
-#include <chrono>
-#include <random>
 #define gap ' '
 #include <bitset>
 #define mini -10000000000000000
@@ -55,9 +33,6 @@ typedef pair<ll, ll> pii;
 #define check_bit(x, idx) min(x&(1LL<<idx),1LL)
 #define toggle_bit(x, idx) x = x^(1LL<<idx)
 inline ll uceil(ll a,ll b) {return (a % b ? a / b + 1 : a / b);}
-#define multi_ordered_set       tree<int, null_type, less_equal<int>, rb_tree_tag, tree_order_statistics_node_update>
-typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
-typedef tree<int, null_type, greater<int>, rb_tree_tag, tree_order_statistics_node_update> rordered_set;
 #ifdef DEBUG
 #define ok cerr << __LINE__ <<"is done "<<endl;
 #else

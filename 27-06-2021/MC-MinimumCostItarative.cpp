@@ -98,7 +98,7 @@ int main()
             }
             else
             {
-                dp[i][j] = max(dp[i + 1][j], dp[i][j + 1]);
+               dp[i][j] = max(dp[i + 1][j], dp[i][j + 1]);
             }
           }
       }

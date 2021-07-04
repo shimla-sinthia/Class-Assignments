@@ -5,7 +5,7 @@
 #define ff              first
 #define in              insert
 #define ss              second
-
+#define ll int
 
 class Solution {
 public:
